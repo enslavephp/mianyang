@@ -1,0 +1,77 @@
+<form method="post" action="{:url("dao")}" class="form-signin" enctype="multipart/form-data" role="form"  id="form" >
+      <input name="excel" type="file" class="form-control excel_path">
+      <input type="submit" value="导入数据" class="btn btn-primary">
+</form>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<table class="table table-bordered">
+
+		<thead>
+			<tr class="text-c" role="row">	 
+				<!-- <th width="25" class="sorting_disabled" rowspan="1" colspan="1" aria-label="" id="checkAll" style="width: 25px;"><input type="checkbox" name="" value=""></th> -->
+				<th class="col_1">预约号</th>
+				<th class="col_2">类别（姓名）</th>
+				<th class="col_9">咨询人性别</th>
+				<th class="col_5">使用时间</th>
+				<th class="col_6">电话</th>
+				<th class="col_7">品牌</th>
+				<th class="col_8">故障类别</th>
+				<th class="col_8">所属省份</th>
+				<th class="col_9">所在市区</th>
+				<th class="col_9">来源媒体</th>
+				<th class="col_9">预约方式</th>
+				<th class="col_10">客服</th>
+				<th class="col_11">登记时间</th>
+				<th class="col_12">预计到店时间</th>
+				<th class="col_13">到店时间</th>
+				<th class="col_14">状态</th>
+				<th class="col_16">会员</th> 
+			</tr>
+		</thead>
+		<tbody> 
+
+			{volist name='data' id='item'}
+			<tr class="text-c odd patient click_out" role="row"> 
+				<!-- <td><input type="checkbox" class="checkOne" type="checkbox" data-id="{$item.id}" value="{$item.id}" name="id"></td> -->
+				<td class="col_1 z_row" style="{$item.style}">{$item.name}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.names}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.a}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.b}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.c}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.d}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.e}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.f}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.g}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.h}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.i}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.y}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.k}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.l}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.m}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.n}</td>
+				<td class="col_1 z_row" style="{$item.style}">{$item.w}</td>
+
+
+				
+				
+			</tr>
+			
+				{/volist}
+			</tbody>
+</table>
+
+
+
+
+	
+</body>
+</html>
