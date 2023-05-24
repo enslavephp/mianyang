@@ -100,13 +100,25 @@
 			<input type="text" class="input-text" value="" placeholder="座机号码" name="phone" />
 		</div>
 
-		<label class="form-label col-xs-2">预约时间：</label>
+		<label class="form-label col-xs-2"><span class="c-red">*</span>预约时间：</label>
 		<div class="formControls col-xs-4">
 			<input type="text" class="input-text Wdate" value="" placeholder="预约时间" onblur="times()" name="yy_time" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"/>
-		</div> 
+
+		</div>
 
 	</div>
 	<div class="row cl">
+
+		<!--sjc 新增等级分类-->
+		<label class="form-label col-xs-2"><span class="c-red">*</span>等级：</label>
+		<div class="formControls col-xs-4">
+			<span class="select-box">
+				<select class="select" name="dengji_id" id="sltDengjiId">
+					<option value="0">==请选择==</option>
+				</select>
+			</span>
+		</div>
+
 		<label class="form-label col-xs-2"><span class="c-red">*</span>品牌：</label>
 		<div class="formControls col-xs-4">
 			<span class="select-box">
@@ -444,6 +456,7 @@
 			}
 		});
 		BS_Ajax.doctor($('#sltDoctorId'),true);
+		BS_Ajax.depDisease($('#sltDengjiId'),$('#sltDepartmentId'),true);
 		BS_Ajax.depDisease($('#sltDepartmentId'),$('#sltDiseaseId'),true);
 		BS_Ajax.depconsultationWay($('#sltConsultationWayId'),$('#sltConsultationWayIdd'),true);
 		BS_Ajax.comeWay($('#sltComeWayId'),true);

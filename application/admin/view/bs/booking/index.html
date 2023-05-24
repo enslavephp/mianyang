@@ -29,6 +29,16 @@
 								</select>
 							</span>
 						</div>
+
+<!--sjc 新增等级分类-->
+						<label class="form-label col-xs-1">等级：</label>
+						<div class="formControls col-xs-2">
+							<span class="select-box">
+								<select class="select" did="{:input('get.dengji_id')}" name="dengji_id" id="sltDengjiId">
+										<option value="0" selected="">所有等级</option>
+								</select>
+							</span></div>
+
 						<label class="form-label col-xs-1">所属品牌：</label>
 						<div class="formControls col-xs-2">
 							<span class="select-box">
@@ -256,6 +266,8 @@
 		BS_Ajax.source($('#sltSourceId'),true);
 		BS_Ajax.customService($('#sltCustomServiceId'),true);
 		BS_Ajax.doctor($('#sltDoctorId'),true);
+		//sjc
+		BS_Ajax.depDisease($('#sltDengjiId'),$('#sltDepartmentId'),true);
 		BS_Ajax.depDisease($('#sltDepartmentId'),$('#sltDiseaseId'),true);
 		BS_Ajax.depconsultationWay($('#sltConsultationWayId'),$('#sltConsultationWayIdd'),true);
 		BS_Ajax.comeWay($('#sltComeWayId'),true);

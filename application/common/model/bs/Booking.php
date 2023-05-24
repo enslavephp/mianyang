@@ -369,6 +369,9 @@ class Booking extends Base
     if(array_key_exists('kw', $params)&&!empty($params['kw'])){
         $map['c.name|c.mobile|m.id|m.old_id']=array('like','%'.$params['kw'].'%');   
     }
+    if(array_key_exists('dengji_id', $params)&&!empty($params['dengji_id'])){
+        $map['m.dengji_id']=$params['dengji_id'];
+    }
 
     if(array_key_exists('department_id', $params)&&is_numeric($params['department_id'])&&$params['department_id']>0){
         $map['m.department_id']=$params['department_id'];
